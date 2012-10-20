@@ -20,14 +20,11 @@ License along with this library
 
 using System;
 using System.Collections.Generic;
-using System.Text;
-
+using FimbulwinterClient.Gui.Nuclex.Input.Devices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-using Nuclex.Input.Devices;
-
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Detects which controller the player is using</summary>
   public class ControllerDetector : IDisposable {

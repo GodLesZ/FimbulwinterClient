@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FimbulwinterClient.Core.Exports;
 using FimbulwinterClient.Gui;
 using FimbulwinterClient.Gui.System;
 using Microsoft.Xna.Framework.Graphics;
@@ -22,31 +23,31 @@ namespace FimbulwinterClient.Screens
             window.OnCreateChar += new Action<int>(window_OnCreateChar);
             window.OnSelectChar += new Action<int>(window_OnSelectChar);
 
-            ROClient.Singleton.GuiManager.Controls.Add(window);
+            RagnarokClient.Singleton.GuiManager.Controls.Add(window);
         }
 
         void window_OnSelectChar(int obj)
         {
-            ROClient.Singleton.NetworkState.SelectedChar = ROClient.Singleton.NetworkState.CharAccept.Chars[obj];
-            ROClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[(int)PacketHeader.HEADER_HC_NOTIFY_ZONESVR] = new Action<ushort, int, HC_Notify_Zonesvr>(packet_notify_zonesrv);
+            RagnarokClient.Singleton.NetworkState.SelectedChar = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[obj];
+            RagnarokClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[(int)PacketHeader.HEADER_HC_NOTIFY_ZONESVR] = new Action<ushort, int, HC_Notify_Zonesvr>(packet_notify_zonesrv);
             
-            new CH_Select_Char(obj).Write(ROClient.Singleton.CurrentConnection.BinaryWriter);
+            new CH_Select_Char(obj).Write(RagnarokClient.Singleton.CurrentConnection.BinaryWriter);
         }
 
         private void packet_notify_zonesrv(ushort cmd, int size, HC_Notify_Zonesvr pkt)
         {
             _mapname = pkt.Mapname.Replace(".gat", ".gnd");
-            if (ROClient.Singleton.CurrentConnection != null && ROClient.Singleton.CurrentConnection.Client.Connected)
+            if (RagnarokClient.Singleton.CurrentConnection != null && RagnarokClient.Singleton.CurrentConnection.Client.Connected)
             {
-                ROClient.Singleton.CurrentConnection.Disconnect();
+                RagnarokClient.Singleton.CurrentConnection.Disconnect();
             }
             
-            ROClient.Singleton.CurrentConnection = new Network.Connection();
-            ROClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[(int)PacketHeader.HEADER_ZC_ACCEPT_ENTER2] = new Action<ushort, int, ZC_Accept_Enter2>(packetLoginAccepted);
+            RagnarokClient.Singleton.CurrentConnection = new Network.Connection();
+            RagnarokClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[(int)PacketHeader.HEADER_ZC_ACCEPT_ENTER2] = new Action<ushort, int, ZC_Accept_Enter2>(packetLoginAccepted);
 
             try
             {
-                ROClient.Singleton.CurrentConnection.Connect(pkt.IP.ToString(), pkt.Port);
+                RagnarokClient.Singleton.CurrentConnection.Connect(pkt.IP.ToString(), pkt.Port);
             }
             catch
             {
@@ -54,36 +55,36 @@ namespace FimbulwinterClient.Screens
                 MessageBox.ShowOk("Could not connect to server.", GotoLoginScreen);
             }
 
-            ROClient.Singleton.CurrentConnection.Start();
+            RagnarokClient.Singleton.CurrentConnection.Start();
             
             new CZ_Enter(
-                ROClient.Singleton.NetworkState.LoginAccept.AccountID,
-                ROClient.Singleton.NetworkState.LoginAccept.LoginID1,
-                ROClient.Singleton.NetworkState.LoginAccept.LoginID2,
-                ROClient.Singleton.NetworkState.LoginAccept.Sex).Write(ROClient.Singleton.CurrentConnection.BinaryWriter);
+                RagnarokClient.Singleton.NetworkState.LoginAccept.AccountID,
+                RagnarokClient.Singleton.NetworkState.LoginAccept.LoginID1,
+                RagnarokClient.Singleton.NetworkState.LoginAccept.LoginID2,
+                RagnarokClient.Singleton.NetworkState.LoginAccept.Sex).Write(RagnarokClient.Singleton.CurrentConnection.BinaryWriter);
         }
 
         void GotoLoginScreen(int dummy)
         {
-            ROClient.Singleton.ChangeScreen(new LoginScreen());
+            RagnarokClient.Singleton.ChangeScreen(new LoginScreen());
         }
 
         void packetLoginAccepted(ushort cmd, int size, ZC_Accept_Enter2 pkt)
         {
             CloseWait();
-            ROClient.Singleton.StartMapChange(_mapname.Replace(".gat", ""));
+            RagnarokClient.Singleton.StartMapChange(_mapname.Replace(".gat", ""));
         }
 
         NewCharWindow newCharWindow;
         void window_OnCreateChar(int obj)
         {
-            if (ROClient.Singleton.GuiManager.Controls.Contains(newCharWindow))
+            if (RagnarokClient.Singleton.GuiManager.Controls.Contains(newCharWindow))
             {
                 // bring to front
                 return;
             }
             newCharWindow = new NewCharWindow();
-            ROClient.Singleton.GuiManager.Controls.Add(newCharWindow);
+            RagnarokClient.Singleton.GuiManager.Controls.Add(newCharWindow);
         }
 
         public override void Update(SpriteBatch sb, GameTime gameTime)
@@ -92,7 +93,7 @@ namespace FimbulwinterClient.Screens
 
             if (gameTime.TotalGameTime.TotalSeconds % 12 < 1.0F)
             {
-                new Ping((int)gameTime.TotalGameTime.TotalMilliseconds).Write(ROClient.Singleton.CurrentConnection.BinaryWriter);
+                new Ping((int)gameTime.TotalGameTime.TotalMilliseconds).Write(RagnarokClient.Singleton.CurrentConnection.BinaryWriter);
             }
         }
 

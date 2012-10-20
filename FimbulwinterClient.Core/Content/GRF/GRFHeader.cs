@@ -1,6 +1,4 @@
-using System;
-
-namespace SAIB.SharpGRF
+namespace FimbulwinterClient.Core.Content.GRF
 {
 	/// <summary>
 	/// GRF header.

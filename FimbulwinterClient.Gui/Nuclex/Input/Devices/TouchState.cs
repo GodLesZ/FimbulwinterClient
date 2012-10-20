@@ -18,13 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Stores the state of a touch panel</summary>
   public struct TouchState {

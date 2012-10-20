@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FimbulwinterClient.Gui.Nuclex.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Nuclex.Input;
 using Microsoft.Xna.Framework.Audio;
 using FimbulwinterClient.Core;
 

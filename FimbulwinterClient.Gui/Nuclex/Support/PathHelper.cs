@@ -19,11 +19,10 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Utility class for path operations</summary>
   public static class PathHelper {

@@ -19,16 +19,14 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Xml;
-#if !USE_XMLDOCUMENT
 using System.Xml.Linq;
-#endif
 using System.Xml.Schema;
+#if !USE_XMLDOCUMENT
+#endif
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Helper routines for handling XML code</summary>
   public static class XmlHelper {

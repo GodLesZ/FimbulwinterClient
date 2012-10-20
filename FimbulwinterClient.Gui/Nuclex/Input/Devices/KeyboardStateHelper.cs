@@ -21,13 +21,11 @@ License along with this library
 #if WINDOWS
 
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
-
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Contains helper methods to modify an XNA KeyboardState</summary>
   internal static class KeyboardStateHelper {

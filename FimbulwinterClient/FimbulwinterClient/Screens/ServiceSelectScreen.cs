@@ -16,13 +16,13 @@ namespace FimbulwinterClient.Screens
             window = new ServiceSelectWindow();
             window.ServerSelected += new Action<ServerInfo>(window_ServerSelected);
 
-            ROClient.Singleton.GuiManager.Controls.Add(window);
+            RagnarokClient.Singleton.GuiManager.Controls.Add(window);
         }
 
         void window_ServerSelected(ServerInfo obj)
         {
-            ROClient.Singleton.NetworkState.SelectedServer = obj;
-            ROClient.Singleton.ChangeScreen(new LoginScreen());
+            RagnarokClient.Singleton.NetworkState.SelectedServer = obj;
+            RagnarokClient.Singleton.ChangeScreen(new LoginScreen());
         }
 
         public override void Dispose()

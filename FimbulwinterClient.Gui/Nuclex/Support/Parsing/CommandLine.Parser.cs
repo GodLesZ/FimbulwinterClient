@@ -18,12 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 
-namespace Nuclex.Support.Parsing {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Parsing {
 
   partial class CommandLine {
 

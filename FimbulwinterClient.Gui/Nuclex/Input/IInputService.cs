@@ -18,16 +18,11 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
+using FimbulwinterClient.Gui.Nuclex.Input.Devices;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
 
-using Nuclex.Input.Devices;
-
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Provides access to the game's input devices</summary>
   /// <remarks>

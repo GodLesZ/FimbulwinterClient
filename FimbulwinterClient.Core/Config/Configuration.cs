@@ -1,119 +1,115 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Linq;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.IO;
 using System.Xml.Serialization;
-using FimbulwinterClient.Core;
 using FimbulwinterClient.Core.Content;
 
-namespace FimbulwinterClient.Core.Config
-{
-    [Serializable]
-    public class Configuration
-    {
-        private float _bgmVolume;
-        public float BgmVolume
-        {
-            get { return _bgmVolume; }
-            set
-            {
-                if (_bgmVolume != value && BgmVolumeChanged != null)
-                    BgmVolumeChanged(value);
+namespace FimbulwinterClient.Core.Config {
 
-                _bgmVolume = value; 
-            }
-        }
+	[Serializable]
+	public class Configuration {
+		public static string DefaultPath = @"data\config\client.xml";
 
-        private float _effectVolume;
-        public float EffectVolume
-        {
-            get { return _effectVolume; }
-            set 
-            {
-                if (_effectVolume != value && EffectVolumeChanged != null)
-                    EffectVolumeChanged(value);
+		private float mBgmVolume;
+		private float mEffectVolume;
 
-                _effectVolume = value; 
-            }
-        }
+		public float BgmVolume {
+			get { return mBgmVolume; }
+			set {
+				if (BgmVolume.Equals(value) == false && BgmVolumeChanged != null) {
+					BgmVolumeChanged(value);
+				}
+				mBgmVolume = value;
+			}
+		}
 
-        private int _screenWidth;
-        public int ScreenWidth
-        {
-            get { return _screenWidth; }
-            set { _screenWidth = value; }
-        }
+		public float EffectVolume {
+			get { return mEffectVolume; }
+			set {
+				if (EffectVolume.Equals(value) == false && EffectVolumeChanged != null) {
+					EffectVolumeChanged(value);
+				}
+				mEffectVolume = value;
+			}
+		}
 
-        private int _screenHeight;
-        public int ScreenHeight
-        {
-            get { return _screenHeight; }
-            set { _screenHeight = value; }
-        }
+		public int ScreenWidth {
+			get;
+			set;
+		}
 
-        private string _lastLogin;
-        public string LastLogin
-        {
-            get { return _lastLogin; }
-            set { _lastLogin = value; }
-        }
+		public int ScreenHeight {
+			get;
+			set;
+		}
 
-        private bool _saveLast;
-        public bool SaveLast
-        {
-            get { return _saveLast; }
-            set { _saveLast = value; }
-        }
+		public string LastLogin {
+			get;
+			set;
+		}
 
-        private ServersInfo _serversInfo;
-        [XmlIgnore]
-        public ServersInfo ServersInfo
-        {
-            get { return _serversInfo; }
-            set { _serversInfo = value; }
-        }
+		public bool SaveLast {
+			get;
+			set;
+		}
 
-        public event Action<float> BgmVolumeChanged;
-        public event Action<float> EffectVolumeChanged;
+		[XmlArray(ElementName = "GrfFiles")]
+		[XmlArrayItem(ElementName = "Grf")]
+		public ObservableCollection<string> GrfFiles {
+			get;
+			set;
+		}
 
-        public Configuration()
-        {
-            _bgmVolume = 1.0f;
-            _effectVolume = 1.0f;
+		public ServersInfo ServersInfo {
+			get;
+			set;
+		}
 
-            _screenWidth = 1280;
-            _screenHeight = 768;
 
-            _saveLast = false;
-            _lastLogin = "";
-        }
+		public event Action<float> BgmVolumeChanged;
+		public event Action<float> EffectVolumeChanged;
 
-        public static Configuration FromStream(Stream s)
-        {
-            XmlSerializer xs = new XmlSerializer(typeof(Configuration));
 
-            return (Configuration)xs.Deserialize(s);
-        }
+		public Configuration() {
+			mBgmVolume = 1.0f;
+			mEffectVolume = 1.0f;
 
-        public void ReadConfig()
-        {
-            GrfFileSystem.AddGrf(@"rdata.grf");
-            GrfFileSystem.AddGrf(@"data.grf");
+			ScreenWidth = 1280;
+			ScreenHeight = 768;
 
-            using (Stream s = SharedInformation.ContentManager.Load<Stream>(@"data\fb\config\serverinfo.xml"))
-            {
-                _serversInfo = ServersInfo.FromStream(s);
-                s.Close();
-            }
-        }
+			SaveLast = false;
+			LastLogin = "";
 
-        public void Save()
-        {
-            XmlSerializer xs = new XmlSerializer(typeof(Configuration));
+			ServersInfo = new ServersInfo();
 
-            xs.Serialize(new FileStream(@"data\fb\config\config.xml", FileMode.Create), this);
-        }
-    }
+			GrfFiles = new ObservableCollection<string>();
+			GrfFiles.CollectionChanged += GrfFilesOnCollectionChanged;
+		}
+
+
+		private void GrfFilesOnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e) {
+			if (e.Action != NotifyCollectionChangedAction.Add) {
+				return;
+			}
+
+			foreach (var newItem in e.NewItems) {
+				GrfFileSystem.AddGrf((string)newItem);
+			}
+		}
+
+
+		public static Configuration FromStream(Stream s) {
+			var xs = new XmlSerializer(typeof(Configuration));
+			return (Configuration)xs.Deserialize(s);
+		}
+
+
+		public void Save() {
+			var xs = new XmlSerializer(typeof(Configuration));
+			xs.Serialize(new FileStream(DefaultPath, FileMode.Create), this);
+		}
+
+	}
+
 }

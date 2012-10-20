@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Net;
+using FimbulwinterClient.Core.Exports;
+using FimbulwinterClient.Extensions;
 
 namespace FimbulwinterClient.Network.Packets.Character
 {

@@ -24,7 +24,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Alternative Thread pool providing one thread for each core</summary>
   /// <remarks>
@@ -91,7 +91,7 @@ namespace Nuclex.Support {
 #if XBOX360 || WINDOWS_PHONE
       workAvailable = new Semaphore();
 #else
-      workAvailable = new System.Threading.Semaphore(0, int.MaxValue);
+      workAvailable = new global::System.Threading.Semaphore(0, int.MaxValue);
 #endif
       userWorkItems = new Queue<UserWorkItem>(Processors * 4);
       workerThreads = new List<Thread>(Processors);
@@ -306,7 +306,7 @@ namespace Nuclex.Support {
 #if XBOX360 || WINDOWS_PHONE
     private static Semaphore workAvailable;
 #else
-    private static System.Threading.Semaphore workAvailable;
+    private static global::System.Threading.Semaphore workAvailable;
 #endif
     /// <summary>List of all worker threads at the disposal of the thread pool.</summary>
     private static List<Thread> workerThreads;

@@ -4,25 +4,12 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using System.Net;
+using FimbulwinterClient.Core.Exports;
+using FimbulwinterClient.Extensions;
 
 namespace FimbulwinterClient.Network.Packets.Account
 {
-    public struct CharServerInfo
-    {
-        public IPAddress IP { get; set; }
-        public int Port { get; set; }
-        public string Name { get; set; }
-        public int Users { get; set; }
-        public byte Type { get; set; }
-        public byte New { get; set; }
-
-        public override string ToString()
-        {
-            return Name + " (" + Users + " Player)";
-        }
-    }
-
-    [PackerHandler(PacketHeader.HEADER_AC_ACCEPT_LOGIN,
+	[PackerHandler(PacketHeader.HEADER_AC_ACCEPT_LOGIN,
         "AC_ACCEPT_LOGIN",
         PackerHandlerAttribute.VariableSize,
         PackerHandlerAttribute.PacketDirection.In)]

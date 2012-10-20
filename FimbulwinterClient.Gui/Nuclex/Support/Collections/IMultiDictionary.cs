@@ -22,7 +22,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>
   ///   Associative collection that can store several values under one key and vice versa

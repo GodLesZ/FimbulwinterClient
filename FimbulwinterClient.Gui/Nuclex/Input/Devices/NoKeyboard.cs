@@ -18,14 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Dummy that takes the place of unfilled keyboard slots</summary>
   internal partial class NoKeyboard : IKeyboard {

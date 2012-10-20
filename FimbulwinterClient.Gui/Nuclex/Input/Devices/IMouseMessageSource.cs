@@ -18,12 +18,10 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Delegate used to report a mouse event</summary>
   /// <param name="button">Button that has been pressed or released</param>

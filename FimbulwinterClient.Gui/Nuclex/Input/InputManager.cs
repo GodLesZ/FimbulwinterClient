@@ -21,26 +21,23 @@ License along with this library
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
+using FimbulwinterClient.Gui.Nuclex.Input.Devices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-
-using Nuclex.Input.Devices;
-
 using XnaMouse = Microsoft.Xna.Framework.Input.Mouse;
 using XnaEventHandler = System.EventHandler<System.EventArgs>;
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Manages and polls input devices</summary>
   public class InputManager :
     IInputService, IGameComponent, IUpdateable, IDisposable {
 
     /// <summary>Fired when the UpdateOrder property changes its  value</summary>
-    public event XnaEventHandler UpdateOrderChanged;
+    public event EventHandler<EventArgs> UpdateOrderChanged;
 
     /// <summary>Fired when the Enabled property changes its value</summary>
-    public event XnaEventHandler EnabledChanged { add { } remove { } }
+    public event EventHandler<EventArgs> EnabledChanged { add { } remove { } }
 
     /// <summary>Initializes a new input manager</summary>
     /// <remarks>
@@ -49,7 +46,7 @@ namespace Nuclex.Input {
     ///   on the XNA Game class or if you assign the Mouse.WindowHandle
     ///   property sourself.
     /// </remarks>
-    public InputManager() : this(XnaMouse.WindowHandle) { }
+    public InputManager() : this((IntPtr)XnaMouse.WindowHandle) { }
 
     /// <summary>Initializes a new input manager</summary>
     /// <param name="windowHandle">Handle of the game's main window</param>
@@ -58,7 +55,7 @@ namespace Nuclex.Input {
     /// <summary>Initializs a new input manager</summary>
     /// <param name="services">Game service container the manager registers to</param>
     public InputManager(GameServiceContainer services) :
-      this(services, XnaMouse.WindowHandle) { }
+      this(services, Mouse.WindowHandle) { }
 
     /// <summary>Initializs a new input manager</summary>
     /// <param name="services">Game service container the manager registers to</param>

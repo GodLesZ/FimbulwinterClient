@@ -18,14 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   partial class MockedKeyboard {
 

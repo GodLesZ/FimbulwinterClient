@@ -18,13 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Interfaces with an XBox 360 controller via XNA (XINPUT)</summary>
   public abstract class GamePad : IGamePad {

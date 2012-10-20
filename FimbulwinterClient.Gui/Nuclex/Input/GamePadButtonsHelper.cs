@@ -18,12 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Contains helper methods for the GamePadButtons enumeration</summary>
   public static class GamePadButtonsHelper {

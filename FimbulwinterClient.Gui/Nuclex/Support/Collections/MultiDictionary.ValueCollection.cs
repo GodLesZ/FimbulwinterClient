@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   partial class MultiDictionary<TKey, TValue> {
 

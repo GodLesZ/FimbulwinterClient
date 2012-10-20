@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using FimbulwinterClient.Extensions;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
@@ -143,8 +144,7 @@ namespace FimbulwinterClient.Core.Assets
             _rootMesh.Draw(world, effect, gameTime);
         }
 
-        float maxrange;
-        public Vector3 realbbmin, realbbmax, realbbrange;
+	    public Vector3 realbbmin, realbbmax, realbbrange;
         Vector3 bbmin, bbmax, bbrange;
     }
 }

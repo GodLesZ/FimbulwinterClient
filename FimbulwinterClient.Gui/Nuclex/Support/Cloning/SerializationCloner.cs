@@ -26,7 +26,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Nuclex.Support.Cloning {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Cloning {
 
   /// <summary>Clones objects via serialization</summary>
   /// <remarks>

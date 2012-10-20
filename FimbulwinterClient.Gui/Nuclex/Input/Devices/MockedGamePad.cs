@@ -20,13 +20,12 @@ License along with this library
 
 using System;
 using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 
 #if !XBOX360
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Code-controllable game pad for unit testing</summary>
   public class MockedGamePad : GamePad {

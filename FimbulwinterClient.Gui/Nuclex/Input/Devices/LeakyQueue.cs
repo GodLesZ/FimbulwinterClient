@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Specialized queue which lets users access its raw data</summary>
   /// <typeparam name="ItemType">Type of items the queue will contain</typeparam>

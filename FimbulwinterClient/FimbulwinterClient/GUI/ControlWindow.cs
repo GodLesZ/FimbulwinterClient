@@ -130,13 +130,13 @@ namespace FimbulwinterClient.Gui
         private void btnButton_Clicked(Nuclex.Input.MouseButtons buttons, float arg1, float arg2)
         {
             AddDebugText("Button clicked");
-            if (ROClient.Singleton.GuiManager.Controls.Contains(newCharWindow))
+            if (RagnarokClient.Singleton.GuiManager.Controls.Contains(newCharWindow))
             {
                 // bring to front
                 return;
             }
             newCharWindow = new NewCharWindow();
-            ROClient.Singleton.GuiManager.Controls.Add(newCharWindow);
+            RagnarokClient.Singleton.GuiManager.Controls.Add(newCharWindow);
         }
         
         private void asArrowSelector_ValueChanged()

@@ -20,7 +20,7 @@ License along with this library
 
 using System;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Plugin type employer</summary>
   /// <remarks>

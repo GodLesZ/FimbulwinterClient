@@ -22,8 +22,6 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-using Nuclex.Support.Plugins;
-
 #if ENABLE_SERVICEMANAGER
 
 namespace Nuclex.Support.Services {

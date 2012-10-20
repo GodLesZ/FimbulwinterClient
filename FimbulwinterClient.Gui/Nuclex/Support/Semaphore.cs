@@ -19,10 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Threading;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>A reverse counting semaphore</summary>
   /// <remarks>

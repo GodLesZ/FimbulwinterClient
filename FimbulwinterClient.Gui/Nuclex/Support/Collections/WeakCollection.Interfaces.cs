@@ -21,9 +21,8 @@ License along with this library
 using System;
 using System.Threading;
 using System.Collections;
-using System.Collections.Generic;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   partial class WeakCollection<ItemType> {
 
@@ -45,7 +44,7 @@ namespace Nuclex.Support.Collections {
     /// <summary>Adds an item to the WeakCollection.</summary>
     /// <param name="value">The System.Object to add to the WeakCollection.</param>
     /// <returns>The position into which the new element was inserted.</returns>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The System.Collections.IList is read-only or the WeakCollection has a fixed size.
     /// </exception>
     int IList.Add(object value) {
@@ -82,13 +81,13 @@ namespace Nuclex.Support.Collections {
     ///   The zero-based index at which value should be inserted.
     /// </param>
     /// <param name="value">The System.Object to insert into the WeakCollection.</param>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the TransformingReadOnlyCollection.
     /// </exception>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The System.Collections.IList is read-only or the WeakCollection has a fixed size.
     /// </exception>
-    /// <exception cref="System.NullReferenceException">
+    /// <exception cref="NullReferenceException">
     ///   Value is null reference in the WeakCollection.
     /// </exception>
     void IList.Insert(int index, object value) {
@@ -107,7 +106,7 @@ namespace Nuclex.Support.Collections {
     ///   Removes the first occurrence of a specific object from the WeakCollection.
     /// </summary>
     /// <param name="value">The System.Object to remove from the WeakCollection.</param>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The WeakCollection is read-only or the WeakCollection has a fixed size.
     /// </exception>
     void IList.Remove(object value) {
@@ -118,7 +117,7 @@ namespace Nuclex.Support.Collections {
     /// <summary>Gets or sets the element at the specified index.</summary>
     /// <param name="index">The zero-based index of the element to get or set.</param>
     /// <returns>The element at the specified index</returns>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the WeakCollection
     /// </exception>
     object IList.this[int index] {
@@ -142,18 +141,18 @@ namespace Nuclex.Support.Collections {
     ///   copied from WeakCollection. The System.Array must have zero-based indexing.
     /// </param>
     /// <param name="index">The zero-based index in array at which copying begins.</param>
-    /// <exception cref="System.ArgumentNullException">
+    /// <exception cref="ArgumentNullException">
     ///   Array is null.
     /// </exception>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is less than zero.
     /// </exception>
-    /// <exception cref="System.ArgumentException">
+    /// <exception cref="ArgumentException">
     ///   Array is multidimensional or index is equal to or greater than the length
     ///   of array or the number of elements in the source WeakCollection is greater than
     ///   the available space from index to the end of the destination array.
     /// </exception>
-    /// <exception cref="System.InvalidCastException">
+    /// <exception cref="InvalidCastException">
     ///   The type of the source WeakCollection cannot be cast automatically to the type of
     ///   the destination array.
     /// </exception>

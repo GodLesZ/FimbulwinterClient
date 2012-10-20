@@ -18,10 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Collections.Generic;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>
   ///   Compares two values in reverse or reverses the output of another comparer

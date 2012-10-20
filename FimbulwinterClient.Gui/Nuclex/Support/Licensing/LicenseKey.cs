@@ -20,10 +20,9 @@ License along with this library
 
 using System;
 using System.Collections;
-using System.IO;
 using System.Text;
 
-namespace Nuclex.Support.Licensing {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Licensing {
 
   /// <summary>Typical license key with 5x5 alphanumerical characters</summary>
   /// <remarks>

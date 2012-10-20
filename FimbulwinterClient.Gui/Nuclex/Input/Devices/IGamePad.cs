@@ -18,12 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Delegate use to report presses and releases of game pad buttons</summary>
   /// <param name="buttons">Button or buttons that have been pressed or released</param>

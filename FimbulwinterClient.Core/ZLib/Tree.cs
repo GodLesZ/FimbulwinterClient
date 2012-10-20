@@ -61,9 +61,7 @@
 // -----------------------------------------------------------------------
 
 
-using System;
-
-namespace Ionic.Zlib
+namespace FimbulwinterClient.Core.ZLib
 {
     sealed class Tree
     {

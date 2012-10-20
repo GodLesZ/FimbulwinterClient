@@ -19,12 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Reflection;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Collection that automatically assigns an owner to all its elements</summary>
   /// <remarks>

@@ -19,11 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Reflection;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Helper methods for enumerations</summary>
   public static class EnumHelper {

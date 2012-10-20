@@ -21,7 +21,7 @@ License along with this library
 using System;
 using System.Collections.Generic;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Employer to create factories of suiting types found in plugins</summary>
   /// <typeparam name="ProductType">

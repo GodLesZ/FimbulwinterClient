@@ -21,18 +21,12 @@ License along with this library
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
+using FimbulwinterClient.Gui.Nuclex.Input.Devices;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-
-using Nuclex.Input.Devices;
-
-using XnaMouse = Microsoft.Xna.Framework.Input.Mouse;
-using XnaEventHandler = System.EventHandler<System.EventArgs>;
 
 #if WINDOWS
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Manages a set of fake input devices</summary>
   public class MockInputManager : IInputService, IDisposable {

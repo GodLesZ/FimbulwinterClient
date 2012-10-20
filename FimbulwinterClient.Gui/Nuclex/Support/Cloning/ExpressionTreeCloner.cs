@@ -23,7 +23,7 @@ License along with this library
 using System;
 using System.Collections.Concurrent;
 
-namespace Nuclex.Support.Cloning {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Cloning {
 
   /// <summary>
   ///   Cloning factory which uses expression trees to improve performance when cloning

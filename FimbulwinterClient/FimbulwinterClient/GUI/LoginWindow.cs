@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FimbulwinterClient.Gui.Nuclex.Input;
 using FimbulwinterClient.Gui.System;
 using Microsoft.Xna.Framework;
-using Nuclex.Input;
 using FimbulwinterClient.Core.Config;
 using FimbulwinterClient.Core;
 

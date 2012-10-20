@@ -22,11 +22,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-#if !NO_SPECIALIZED_COLLECTIONS
 using System.Collections.Specialized;
+#if !NO_SPECIALIZED_COLLECTIONS
+
 #endif
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Collection which fires events when items are added or removed</summary>
   /// <typeparam name="TItem">Type of items the collection manages</typeparam>
@@ -64,7 +65,7 @@ namespace Nuclex.Support.Collections {
     ///   Initializes a new ObservableCollection as a wrapper for an existing collection
     /// </summary>
     /// <param name="collection">Collection that will be wrapped</param>
-    /// <exception cref="System.ArgumentNullException">List is null</exception>
+    /// <exception cref="ArgumentNullException">List is null</exception>
     public ObservableCollection(ICollection<TItem> collection) {
       this.typedCollection = collection;
       this.objectCollection = (collection as ICollection);

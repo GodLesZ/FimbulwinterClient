@@ -19,10 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
 #if !WINDOWS_PHONE
 
@@ -70,7 +69,7 @@ namespace Nuclex.Support {
     ///   (Reserved) Describes the source and destination of the serialized stream
     ///   specified by info.
     /// </param>
-    /// <exception cref="System.ArgumentNullException">
+    /// <exception cref="ArgumentNullException">
     ///   The info parameter is null.
     /// </exception>
     protected WeakReference(SerializationInfo info, StreamingContext context) :
@@ -87,7 +86,7 @@ namespace Nuclex.Support {
     ///   has been garbage collected; otherwise, a reference to the object referenced
     ///   by the current System.WeakReference object.
     /// </remarks>
-    /// <exception cref="System.InvalidOperationException">
+    /// <exception cref="InvalidOperationException">
     ///   The reference to the target object is invalid. This can occur if the current
     ///   System.WeakReference object has been finalized
     /// </exception>

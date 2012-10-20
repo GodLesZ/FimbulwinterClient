@@ -19,9 +19,8 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Available axes on a controller</summary>
   [Flags]

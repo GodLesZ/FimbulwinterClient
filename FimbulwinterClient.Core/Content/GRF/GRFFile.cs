@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 using System.Text;
-using Ionic.Zlib;
+using FimbulwinterClient.Core.ZLib;
 
-namespace GRFSharp
+namespace FimbulwinterClient.Core.Content.GRF
 {
     public class GRFFile
     {

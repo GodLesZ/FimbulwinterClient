@@ -18,12 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Delegate used to report movement of the mouse cursor</summary>
   /// <param name="x">New X coordinate of the mouse cursor</param>

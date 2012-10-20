@@ -22,7 +22,7 @@ using System;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Integration host for plugins</summary>
   /// <remarks>

@@ -1,50 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace FimbulwinterClient.Core.Config
-{
-    [Serializable]
-    public class ServersInfo
-    {
-        private List<ServerInfo> _servers;
+namespace FimbulwinterClient.Core.Config {
 
-        [XmlArray("Servers")]
-        public List<ServerInfo> Servers
-        {
-            get { return _servers; }
-            set { _servers = value; }
-        }
+	[Serializable]
+	public class ServersInfo {
 
-        private string _serviceType;
-        public string ServiceType
-        {
-            get { return _serviceType; }
-            set { _serviceType = value; }
-        }
+		[XmlArray("Servers")]
+		public List<ServerInfo> Servers {
+			get;
+			set;
+		}
 
-        private string _serverType;
-        public string ServerType
-        {
-            get { return _serverType; }
-            set { _serverType = value; }
-        }
+		public string ServiceType {
+			get;
+			set;
+		}
 
-        public ServersInfo()
-        {
-            _servers = new List<ServerInfo>();
-            _serviceType = "";
-            _serverType = "";
-        }
+		public string ServerType {
+			get;
+			set;
+		}
 
-        public static ServersInfo FromStream(Stream s)
-        {
-            XmlSerializer xs = new XmlSerializer(typeof(ServersInfo));
 
-            return (ServersInfo)xs.Deserialize(s);
-        }
-    }
+		public ServersInfo() {
+			Servers = new List<ServerInfo>();
+			ServiceType = "";
+			ServerType = "";
+		}
+
+		public static ServersInfo FromStream(Stream s) {
+			if (s == null || s.CanRead == false) {
+				throw new ArgumentException("Stream cant be null and must be readable", "s");
+			}
+
+			var xs = new XmlSerializer(typeof(ServersInfo));
+			return (ServersInfo)xs.Deserialize(s);
+		}
+
+	}
+
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace FimbulwinterClient.Gui
+﻿namespace FimbulwinterClient.Gui.Ingame
 {
     class CharacterInfoWindow
     {

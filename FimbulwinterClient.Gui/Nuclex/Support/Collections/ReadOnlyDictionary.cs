@@ -21,10 +21,9 @@ License along with this library
 using System;
 using System.Collections.Generic;
 using System.Collections;
-using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Wraps a dictionary and prevents users from modifying it</summary>
   /// <typeparam name="KeyType">Type of the keys used in the dictionary</typeparam>
@@ -61,7 +60,7 @@ namespace Nuclex.Support.Collections {
       ///   (Reserved) Describes the source and destination of the serialized stream
       ///   specified by info.
       /// </param>
-      /// <exception cref="System.ArgumentNullException">
+      /// <exception cref="ArgumentNullException">
       ///   The info parameter is null.
       /// </exception>
       public SerializedDictionary(SerializationInfo info, StreamingContext context) :
@@ -83,7 +82,7 @@ namespace Nuclex.Support.Collections {
     ///   (Reserved) Describes the source and destination of the serialized stream
     ///   specified by info.
     /// </param>
-    /// <exception cref="System.ArgumentNullException">
+    /// <exception cref="ArgumentNullException">
     ///   The info parameter is null.
     /// </exception>
     protected ReadOnlyDictionary(SerializationInfo info, StreamingContext context) :
@@ -225,7 +224,7 @@ namespace Nuclex.Support.Collections {
 
     /// <summary>Returns a new object enumerator for the Dictionary</summary>
     /// <returns>The new object enumerator</returns>
-    System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
+    global::System.Collections.IEnumerator global::System.Collections.IEnumerable.GetEnumerator() {
       return (this.typedDictionary as IEnumerable).GetEnumerator();
     }
 

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace GRFSharp
+namespace FimbulwinterClient.Core.Content.GRF
 {
     public class GRFEventArg : EventArgs
     {

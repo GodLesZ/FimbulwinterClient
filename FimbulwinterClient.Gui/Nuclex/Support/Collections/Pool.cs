@@ -18,11 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Pool that recycles objects in order to avoid garbage build-up</summary>
   /// <typeparam name="ItemType">Type of objects being pooled</typeparam>

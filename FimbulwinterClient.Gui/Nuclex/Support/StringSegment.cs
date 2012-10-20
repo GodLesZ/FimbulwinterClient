@@ -19,10 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Delimits a section of a string</summary>
   /// <remarks>
@@ -49,7 +48,7 @@ namespace Nuclex.Support {
     ///   all the elements in the specified string
     /// </summary>
     /// <param name="text">String that will be wrapped</param>
-    /// <exception cref="System.ArgumentNullException">String is null</exception>
+    /// <exception cref="ArgumentNullException">String is null</exception>
     public StringSegment(string text) {
       if(text == null) { // questionable, but matches behavior of ArraySegment class
         throw new ArgumentNullException("text", "Text must not be null");
@@ -67,13 +66,13 @@ namespace Nuclex.Support {
     /// <param name="text">The string containing the range of elements to delimit</param>
     /// <param name="offset">The zero-based index of the first element in the range</param>
     /// <param name="count">The number of elements in the range</param>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Offset or count is less than 0
     /// </exception>
-    /// <exception cref="System.ArgumentException">
+    /// <exception cref="ArgumentException">
     ///   Offset and count do not specify a valid range in array
     /// </exception>
-    /// <exception cref="System.ArgumentNullException">String is null</exception>
+    /// <exception cref="ArgumentNullException">String is null</exception>
     public StringSegment(string text, int offset, int count) {
       if(text == null) { // questionable, but matches behavior of ArraySegment class
         throw new ArgumentNullException("text");

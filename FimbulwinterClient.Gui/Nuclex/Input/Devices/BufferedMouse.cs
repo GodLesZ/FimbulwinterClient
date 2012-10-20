@@ -18,15 +18,13 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 using System.Runtime.InteropServices;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Mouse that buffers mouse events until Update() is called</summary>
   public abstract class BufferedMouse : IMouse {

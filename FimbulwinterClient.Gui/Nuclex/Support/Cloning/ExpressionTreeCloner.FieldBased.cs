@@ -26,7 +26,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace Nuclex.Support.Cloning {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Cloning {
 
   partial class ExpressionTreeCloner : ICloneFactory {
 

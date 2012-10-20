@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <BgmVolume>1</BgmVolume>
+  <EffectVolume>1</EffectVolume>
+  <ScreenWidth>1280</ScreenWidth>
+  <ScreenHeight>768</ScreenHeight>
+  <LastLogin />
+  <SaveLast>true</SaveLast>
+  <GrfFiles>
+    <Grf>data/rdata.grf</Grf>
+    <Grf>data/data.grf</Grf>
+  </GrfFiles>
+  <ServersInfo>
+    <Servers>
+      <ServerInfo>
+        <DisplayName>Test Server</DisplayName>
+        <Description></Description>
+        <Address>127.0.0.1</Address>
+        <Port>6900</Port>
+        <Version>22</Version>
+        <RegistrationUrl>http://google.de</RegistrationUrl>
+      </ServerInfo>
+    </Servers>
+    <ServiceType>korea</ServiceType>
+    <ServerType>sakray</ServerType>
+  </ServersInfo>
+</Configuration>

@@ -18,9 +18,7 @@ License along with this library
 */
 #endregion
 
-using System;
-
-namespace Nuclex.Support.Cloning {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Cloning {
 
   /// <summary>Copies the state of objects</summary>
   public interface IStateCopier {

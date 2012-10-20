@@ -23,7 +23,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Dictionary that can contain multiple values under the same key</summary>
   /// <typeparam name="TKey">Type of keys used within the dictionary</typeparam>

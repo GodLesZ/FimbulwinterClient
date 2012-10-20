@@ -21,11 +21,10 @@ License along with this library
 #if WINDOWS
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Provides access to some P/Invoke-imported native methods</summary>
   internal static class UnsafeNativeMethods {

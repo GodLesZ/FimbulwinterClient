@@ -1,8 +1,6 @@
 using System;
-using System.Security.Cryptography;
-using System.IO;
 
-namespace GRFSharp
+namespace FimbulwinterClient.Core.Content.GRF
 {
     public static class DES
     {

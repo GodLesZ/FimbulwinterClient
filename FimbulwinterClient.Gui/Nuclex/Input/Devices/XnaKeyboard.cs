@@ -20,12 +20,10 @@ License along with this library
 
 using System;
 using System.Collections.Generic;
-using System.Reflection;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Interfaces with an XBox 360 chat pad via XNA (XINPUT)</summary>
   internal partial class XnaKeyboard : IKeyboard {

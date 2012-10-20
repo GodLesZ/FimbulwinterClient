@@ -20,7 +20,7 @@ License along with this library
 
 using System;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Attribute that prevents a class from being seen by the PluginHost</summary>
   /// <remarks>

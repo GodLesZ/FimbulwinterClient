@@ -19,9 +19,8 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Helper routines for working with strings</summary>
   public static class StringHelper {

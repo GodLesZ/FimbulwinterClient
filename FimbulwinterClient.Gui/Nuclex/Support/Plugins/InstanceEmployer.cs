@@ -21,7 +21,7 @@ License along with this library
 using System;
 using System.Collections.Generic;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Employer that directly creates instances of the types in a plugin</summary>
   /// <typeparam name="T">Interface or base class required for the employed types</typeparam>

@@ -119,10 +119,83 @@
   <ItemGroup>
     <Compile Include="Audio\BGMManager.cs" />
     <Compile Include="Audio\EffectManager.cs" />
+    <Compile Include="Audio\FMOD\ADVANCEDSETTINGS.cs" />
+    <Compile Include="Audio\FMOD\ASYNCREADINFO.cs" />
+    <Compile Include="Audio\FMOD\CAPS.cs" />
+    <Compile Include="Audio\FMOD\CDTOC.cs" />
+    <Compile Include="Audio\FMOD\Channel.cs" />
+    <Compile Include="Audio\FMOD\ChannelGroup.cs" />
+    <Compile Include="Audio\FMOD\CHANNELINDEX.cs" />
+    <Compile Include="Audio\FMOD\CHANNEL_CALLBACKTYPE.cs" />
+    <Compile Include="Audio\FMOD\CREATESOUNDEXINFO.cs" />
+    <Compile Include="Audio\FMOD\DEBUGLEVEL.cs" />
+    <Compile Include="Audio\FMOD\DELAYTYPE.cs" />
+    <Compile Include="Audio\FMOD\DELAYTYPE_UTILITY.cs" />
+    <Compile Include="Audio\FMOD\DSP.cs" />
+    <Compile Include="Audio\FMOD\DSPConnection.cs" />
+    <Compile Include="Audio\FMOD\DSP_CHORUS.cs" />
+    <Compile Include="Audio\FMOD\DSP_COMPRESSOR.cs" />
+    <Compile Include="Audio\FMOD\DSP_DELAY.cs" />
+    <Compile Include="Audio\FMOD\DSP_DESCRIPTION.cs" />
+    <Compile Include="Audio\FMOD\DSP_DISTORTION.cs" />
+    <Compile Include="Audio\FMOD\DSP_ECHO.cs" />
+    <Compile Include="Audio\FMOD\DSP_FFT_WINDOW.cs" />
+    <Compile Include="Audio\FMOD\DSP_FLANGE.cs" />
+    <Compile Include="Audio\FMOD\DSP_HIGHPASS.cs" />
+    <Compile Include="Audio\FMOD\DSP_ITECHO.cs" />
+    <Compile Include="Audio\FMOD\DSP_ITLOWPASS.cs" />
+    <Compile Include="Audio\FMOD\DSP_LOWPASS.cs" />
+    <Compile Include="Audio\FMOD\DSP_LOWPASS_SIMPLE.cs" />
+    <Compile Include="Audio\FMOD\DSP_NORMALIZE.cs" />
+    <Compile Include="Audio\FMOD\DSP_OSCILLATOR.cs" />
+    <Compile Include="Audio\FMOD\DSP_PARAMEQ.cs" />
+    <Compile Include="Audio\FMOD\DSP_PARAMETERDESC.cs" />
+    <Compile Include="Audio\FMOD\DSP_PITCHSHIFT.cs" />
+    <Compile Include="Audio\FMOD\DSP_RESAMPLER.cs" />
+    <Compile Include="Audio\FMOD\DSP_REVERB.cs" />
+    <Compile Include="Audio\FMOD\DSP_SFXREVERB.cs" />
+    <Compile Include="Audio\FMOD\DSP_STATE.cs" />
+    <Compile Include="Audio\FMOD\DSP_TREMOLO.cs" />
+    <Compile Include="Audio\FMOD\DSP_TYPE.cs" />
+    <Compile Include="Audio\FMOD\EVENT_MEMBITS.cs" />
+    <Compile Include="Audio\FMOD\Factory.cs" />
     <Compile Include="Audio\FMOD\fmod.cs" />
     <Compile Include="Audio\FMOD\fmod_dsp.cs" />
-    <Compile Include="Audio\FMOD\fmod_errors.cs" />
-    <Compile Include="Audio\FMOD\fmod_memoryinfo.cs" />
+    <Compile Include="Audio\FMOD\Error.cs" />
+    <Compile Include="Audio\FMOD\MEMORY_USAGE_DETAILS.cs" />
+    <Compile Include="Audio\FMOD\Geometry.cs" />
+    <Compile Include="Audio\FMOD\GUID.cs" />
+    <Compile Include="Audio\FMOD\INITFLAGS.cs" />
+    <Compile Include="Audio\FMOD\MEMBITS.cs" />
+    <Compile Include="Audio\FMOD\Memory.cs" />
+    <Compile Include="Audio\FMOD\MEMORY_TYPE.cs" />
+    <Compile Include="Audio\FMOD\MODE.cs" />
+    <Compile Include="Audio\FMOD\OPENSTATE.cs" />
+    <Compile Include="Audio\FMOD\OUTPUTTYPE.cs" />
+    <Compile Include="Audio\FMOD\PLUGINTYPE.cs" />
+    <Compile Include="Audio\FMOD\PRESET.cs" />
+    <Compile Include="Audio\FMOD\RESULT.cs" />
+    <Compile Include="Audio\FMOD\Reverb.cs" />
+    <Compile Include="Audio\FMOD\REVERB_CHANNELFLAGS.cs" />
+    <Compile Include="Audio\FMOD\REVERB_CHANNELPROPERTIES.cs" />
+    <Compile Include="Audio\FMOD\REVERB_FLAGS.cs" />
+    <Compile Include="Audio\FMOD\REVERB_PROPERTIES.cs" />
+    <Compile Include="Audio\FMOD\Sound.cs" />
+    <Compile Include="Audio\FMOD\SoundGroup.cs" />
+    <Compile Include="Audio\FMOD\SOUNDGROUP_BEHAVIOR.cs" />
+    <Compile Include="Audio\FMOD\SOUND_FORMAT.cs" />
+    <Compile Include="Audio\FMOD\SOUND_TYPE.cs" />
+    <Compile Include="Audio\FMOD\SPEAKER.cs" />
+    <Compile Include="Audio\FMOD\SPEAKERMAPTYPE.cs" />
+    <Compile Include="Audio\FMOD\SPEAKERMODE.cs" />
+    <Compile Include="Audio\FMOD\System.cs" />
+    <Compile Include="Audio\FMOD\SYSTEM_CALLBACKTYPE.cs" />
+    <Compile Include="Audio\FMOD\TAG.cs" />
+    <Compile Include="Audio\FMOD\TAGDATATYPE.cs" />
+    <Compile Include="Audio\FMOD\TAGTYPE.cs" />
+    <Compile Include="Audio\FMOD\TIMEUNIT.cs" />
+    <Compile Include="Audio\FMOD\VECTOR.cs" />
+    <Compile Include="Audio\FMOD\VERSION.cs" />
     <Compile Include="Graphics\Actor.cs" />
     <Compile Include="Gui\ControlWindow.cs" />
     <Compile Include="Gui\Ingame\CharacterInfoWindow.cs" />
@@ -138,9 +211,11 @@
     <Compile Include="Gui\System\CharBrowser.cs" />
     <Compile Include="Gui\System\FPSCounter.cs" />
     <Compile Include="Lua\LuaManager.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="Network\Packets\Base.cs" />
+    <Compile Include="Network\InPacket.cs" />
+    <Compile Include="Network\Packets\Account\CharServerInfo.cs" />
+    <Compile Include="Network\Packets\PackerHandlerAttribute.cs" />
     <Compile Include="Network\Packets\Character\CH_Select_Char.cs" />
+    <Compile Include="Network\Packets\Character\CSCharData.cs" />
     <Compile Include="Network\Packets\Character\HC_Notify_Zonesvr.cs" />
     <Compile Include="Network\Packets\Zone\CZ_Enter.cs" />
     <Compile Include="Network\Packets\Zone\ZC_Accept_Enter2.cs" />
@@ -150,7 +225,7 @@
     <Compile Include="Screens\IGameScreen.cs" />
     <Compile Include="NetworkState.cs" />
     <Compile Include="Network\Connection.cs" />
-    <Compile Include="Network\Packet.cs" />
+    <Compile Include="Network\OutPacket.cs" />
     <Compile Include="Network\PacketSerializer.cs" />
     <Compile Include="Network\Packets\Character\HC_Accept_Enter.cs" />
     <Compile Include="Network\Packets\Character\HC_Refuse_Enter.cs" />
@@ -162,7 +237,7 @@
     <Compile Include="Network\Packets\Account\AC_Refuse_Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ROClient.cs" />
+    <Compile Include="RagnarokClient.cs" />
     <Compile Include="Screens\IngameScreen.cs" />
     <Compile Include="Screens\LoadingScreen.cs" />
     <Compile Include="Statics.cs" />
@@ -179,6 +254,10 @@
     <ProjectReference Include="..\..\FimbulwinterClient.Core\FimbulwinterClient.Core.csproj">
       <Project>{58B02A91-78AE-43F3-A4C1-68E797A02BD9}</Project>
       <Name>FimbulwinterClient.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FimbulwinterClient.Dependencies\FimbulwinterClient.Dependencies.csproj">
+      <Project>{40E20687-36CE-4CF5-AD91-E3C8BB85596F}</Project>
+      <Name>FimbulwinterClient.Dependencies</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\FimbulwinterClient.Extensions\FimbulwinterClient.Extensions.csproj">
       <Project>{4D300142-5220-46E6-8501-1535ADDF804A}</Project>

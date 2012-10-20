@@ -15,7 +15,7 @@ namespace FimbulwinterClient.Screens
         {
             window = new ControlWindow();
 
-            ROClient.Singleton.GuiManager.Controls.Add(window);
+            RagnarokClient.Singleton.GuiManager.Controls.Add(window);
         }
     }
 }

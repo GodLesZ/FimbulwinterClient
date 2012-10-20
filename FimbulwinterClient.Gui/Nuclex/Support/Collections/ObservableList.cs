@@ -21,12 +21,12 @@ License along with this library
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
-#if !NO_SPECIALIZED_COLLECTIONS
 using System.Collections.Specialized;
+#if !NO_SPECIALIZED_COLLECTIONS
+
 #endif
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>List which fires events when items are added or removed</summary>
   /// <typeparam name="TItem">Type of items the collection manages</typeparam>
@@ -65,7 +65,7 @@ namespace Nuclex.Support.Collections {
     ///   for the specified list.
     /// </summary>
     /// <param name="list">The list that is wrapped by the new collection.</param>
-    /// <exception cref="System.ArgumentNullException">List is null</exception>
+    /// <exception cref="ArgumentNullException">List is null</exception>
     public ObservableList(IList<TItem> list) {
       this.typedList = list;
       this.objectList = list as IList; // Gah!

@@ -53,18 +53,13 @@ namespace FimbulwinterClient.Gui.System
             set
             {
                 _direction = value;
-                _se = SpriteEffects.None;
                 if (_direction == 8)
                     _direction = 0;
                 if (_direction < 0)
                     _direction = 7;
-                if (_direction > 4)
-                    _se = SpriteEffects.FlipHorizontally;
                 _init = false;
             }
         }
-
-        private SpriteEffects _se;
 
         private bool _init = false;
         private SpriteAction _headSprite;

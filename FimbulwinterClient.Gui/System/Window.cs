@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FimbulwinterClient.Gui.Nuclex.Input;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-using Nuclex.Input;
 using FimbulwinterClient.Core;
 
 namespace FimbulwinterClient.Gui.System

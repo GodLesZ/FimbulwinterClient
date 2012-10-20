@@ -20,9 +20,8 @@ License along with this library
 
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Provides helper methods for collections</summary>
   internal static class CollectionHelper {

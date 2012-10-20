@@ -18,25 +18,25 @@ namespace FimbulwinterClient.Screens
             window = new CharServerSelectWindow();
             window.ServerSelected += new Action<CharServerInfo>(window_ServerSelected);
 
-            ROClient.Singleton.GuiManager.Controls.Add(window);
+            RagnarokClient.Singleton.GuiManager.Controls.Add(window);
         }
 
         void window_ServerSelected(CharServerInfo obj)
         {
-            ROClient.Singleton.NetworkState.SelectedCharServer = obj;
+            RagnarokClient.Singleton.NetworkState.SelectedCharServer = obj;
 
-            if (ROClient.Singleton.CurrentConnection != null && ROClient.Singleton.CurrentConnection.Client.Connected)
+            if (RagnarokClient.Singleton.CurrentConnection != null && RagnarokClient.Singleton.CurrentConnection.Client.Connected)
             {
-                ROClient.Singleton.CurrentConnection.Disconnect();
+                RagnarokClient.Singleton.CurrentConnection.Disconnect();
             }
 
-            ROClient.Singleton.CurrentConnection = new Network.Connection();
-            ROClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[0x6B] = new Action<ushort, int, HC_Accept_Enter>(packetLoginAccepted);
-            ROClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[0x6C] = new Action<ushort, int, HC_Refuse_Enter>(packetLoginRejected);
+            RagnarokClient.Singleton.CurrentConnection = new Network.Connection();
+            RagnarokClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[0x6B] = new Action<ushort, int, HC_Accept_Enter>(packetLoginAccepted);
+            RagnarokClient.Singleton.CurrentConnection.PacketSerializer.PacketHooks[0x6C] = new Action<ushort, int, HC_Refuse_Enter>(packetLoginRejected);
 
             try
             {
-                ROClient.Singleton.CurrentConnection.Connect(obj.IP.ToString(), obj.Port);
+                RagnarokClient.Singleton.CurrentConnection.Connect(obj.IP.ToString(), obj.Port);
             }
             catch
             {
@@ -44,21 +44,21 @@ namespace FimbulwinterClient.Screens
                 MessageBox.ShowOk("Could not connect to server.", ReenterScreen);
             }
 
-            ROClient.Singleton.CurrentConnection.PacketSerializer.BytesToSkip = 4; // Skip AID
-            ROClient.Singleton.CurrentConnection.Start();
+            RagnarokClient.Singleton.CurrentConnection.PacketSerializer.BytesToSkip = 4; // Skip AID
+            RagnarokClient.Singleton.CurrentConnection.Start();
 
             new CH_Enter(
-                ROClient.Singleton.NetworkState.LoginAccept.AccountID,
-                ROClient.Singleton.NetworkState.LoginAccept.LoginID1,
-                ROClient.Singleton.NetworkState.LoginAccept.LoginID2,
-                ROClient.Singleton.NetworkState.LoginAccept.Sex).Write(ROClient.Singleton.CurrentConnection.BinaryWriter);
+                RagnarokClient.Singleton.NetworkState.LoginAccept.AccountID,
+                RagnarokClient.Singleton.NetworkState.LoginAccept.LoginID1,
+                RagnarokClient.Singleton.NetworkState.LoginAccept.LoginID2,
+                RagnarokClient.Singleton.NetworkState.LoginAccept.Sex).Write(RagnarokClient.Singleton.CurrentConnection.BinaryWriter);
         }
 
         void packetLoginAccepted(ushort cmd, int size, HC_Accept_Enter pkt)
         {
             CloseWait();
-            ROClient.Singleton.NetworkState.CharAccept = pkt;
-            ROClient.Singleton.ChangeScreen(new CharSelectScreen());
+            RagnarokClient.Singleton.NetworkState.CharAccept = pkt;
+            RagnarokClient.Singleton.ChangeScreen(new CharSelectScreen());
         }
 
         void packetLoginRejected(ushort cmd, int size, HC_Refuse_Enter pkt)
@@ -69,7 +69,7 @@ namespace FimbulwinterClient.Screens
 
         void ReenterScreen(int dummy)
         {
-            ROClient.Singleton.ChangeScreen(new LoginScreen());
+            RagnarokClient.Singleton.ChangeScreen(new LoginScreen());
         }
 
         public override void Dispose()

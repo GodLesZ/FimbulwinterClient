@@ -20,14 +20,10 @@ License along with this library
 
 #if WINDOWS
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Microsoft.Xna.Framework.Input.Touch;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Code-controllable touch panel for unit testing</summary>
   public class MockedTouchPanel : TouchPanelBase {

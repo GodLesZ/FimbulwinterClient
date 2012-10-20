@@ -18,15 +18,11 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 
-using MsGamePad = Microsoft.Xna.Framework.Input.GamePad;
-
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Interfaces with an XBox 360 controller via XNA (XINPUT)</summary>
   internal class XnaGamePad : GamePad {
@@ -78,7 +74,7 @@ namespace Nuclex.Input.Devices {
       GamePadState previous = this.current;
 
       if (this.states.Count == 0) {
-        this.current = MsGamePad.GetState(this.playerIndex);
+        this.current = Microsoft.Xna.Framework.Input.GamePad.GetState(this.playerIndex);
       } else {
         this.current = this.states.Dequeue();
       }
@@ -93,7 +89,7 @@ namespace Nuclex.Input.Devices {
     ///   to the user.
     /// </remarks>
     public override void TakeSnapshot() {
-      this.states.Enqueue(MsGamePad.GetState(this.playerIndex));
+      this.states.Enqueue(Microsoft.Xna.Framework.Input.GamePad.GetState(this.playerIndex));
     }
 
     /// <summary>Checks for state changes and triggers the corresponding events</summary>

@@ -22,7 +22,7 @@ using System;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace Nuclex.Support.Cloning {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Cloning {
 
   /// <summary>Clones objects using reflection</summary>
   /// <remarks>

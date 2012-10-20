@@ -18,11 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>An pair of a priority and an item</summary>
   public struct PriorityItemPair<PriorityType, ItemType> {

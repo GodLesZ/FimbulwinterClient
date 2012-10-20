@@ -112,6 +112,7 @@
     <Compile Include="Content\AdvancedContentManager.cs" />
     <Compile Include="Content\DefaultFileSystem.cs" />
     <Compile Include="Content\GrfFileSystem.cs" />
+    <Compile Include="Content\GRF\GRF.cs" />
     <Compile Include="Content\IContentLoader.cs" />
     <Compile Include="Content\IFileSystem.cs" />
     <Compile Include="Content\GRF\DES.cs" />
@@ -129,25 +130,55 @@
     <Compile Include="Content\Loaders\StreamLoader.cs" />
     <Compile Include="Content\Loaders\StringLoader.cs" />
     <Compile Include="Content\Loaders\Texture2DLoader.cs" />
+    <Compile Include="Exports\ClientType.cs" />
+    <Compile Include="Exports\Efst.cs" />
+    <Compile Include="Exports\EmotionTable.cs" />
+    <Compile Include="Exports\Jobtbl.cs" />
+    <Compile Include="Exports\MSGSTRINGID.cs" />
+    <Compile Include="Exports\NotifyErrorResult.cs" />
+    <Compile Include="Exports\PacketHeader.cs" />
+    <Compile Include="Exports\ServiceType.cs" />
+    <Compile Include="Exports\Variables.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="ObservableDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RODirection.cs" />
     <Compile Include="SharedInformation.cs" />
+    <Compile Include="ZLib\Adler.cs" />
+    <Compile Include="ZLib\BlockState.cs" />
+    <Compile Include="ZLib\CompressionLevel.cs" />
+    <Compile Include="ZLib\CompressionMode.cs" />
+    <Compile Include="ZLib\CompressionStrategy.cs" />
     <Compile Include="ZLib\CRC32.cs" />
-    <Compile Include="ZLib\Deflate.cs" />
+    <Compile Include="ZLib\CrcCalculatorStream.cs" />
+    <Compile Include="ZLib\DeflateManager.cs" />
+    <Compile Include="ZLib\DeflateFlavor.cs" />
     <Compile Include="ZLib\DeflateStream.cs" />
+    <Compile Include="ZLib\FlushType.cs" />
     <Compile Include="ZLib\GZipStream.cs" />
-    <Compile Include="ZLib\Inflate.cs" />
+    <Compile Include="ZLib\InflateBlocks.cs" />
+    <Compile Include="ZLib\InflateCodes.cs" />
+    <Compile Include="ZLib\InflateManager.cs" />
     <Compile Include="ZLib\InfTree.cs" />
+    <Compile Include="ZLib\InternalConstants.cs" />
+    <Compile Include="ZLib\InternalInflateConstants.cs" />
     <Compile Include="ZLib\ParallelDeflateOutputStream.cs" />
+    <Compile Include="ZLib\SharedUtils.cs" />
+    <Compile Include="ZLib\StaticTree.cs" />
     <Compile Include="ZLib\Tree.cs" />
-    <Compile Include="ZLib\Zlib.cs" />
+    <Compile Include="ZLib\WorkItem.cs" />
+    <Compile Include="ZLib\ZlibException.cs" />
     <Compile Include="ZLib\ZlibBaseStream.cs" />
     <Compile Include="ZLib\ZlibCodec.cs" />
     <Compile Include="ZLib\ZlibConstants.cs" />
     <Compile Include="ZLib\ZlibStream.cs" />
+    <Compile Include="ZLib\ZlibStreamFlavor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FimbulwinterClient.Dependencies\FimbulwinterClient.Dependencies.csproj">
+      <Project>{40E20687-36CE-4CF5-AD91-E3C8BB85596F}</Project>
+      <Name>FimbulwinterClient.Dependencies</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FimbulwinterClient.Extensions\FimbulwinterClient.Extensions.csproj">
       <Project>{4D300142-5220-46E6-8501-1535ADDF804A}</Project>
       <Name>FimbulwinterClient.Extensions</Name>

@@ -23,16 +23,11 @@ License along with this library
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using FimbulwinterClient.Gui.Nuclex.Input.Devices;
+using Keys = Microsoft.Xna.Framework.Input.Keys;
 
-using Microsoft.Xna.Framework.Input;
-
-using Nuclex.Input.Devices;
-
-using Application = System.Windows.Forms.Application;
-using IMessageFilter = System.Windows.Forms.IMessageFilter;
-using Message = System.Windows.Forms.Message;
-
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Filters window message before they arrive at the XNA window</summary>
   internal class WindowMessageFilter :

@@ -18,10 +18,7 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Abstract factory for a concrete type</summary>
   public interface IAbstractFactory {

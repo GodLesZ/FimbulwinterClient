@@ -24,7 +24,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Stores loaded plugins</summary>
   /// <remarks>

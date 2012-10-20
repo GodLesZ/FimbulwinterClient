@@ -20,7 +20,7 @@ namespace FimbulwinterClient.Lua
         private LuaInterface.Lua _luaparser;
 
         public LuaManager()
-            : base(ROClient.Singleton)
+            : base(RagnarokClient.Singleton)
         {
             _luaparser = new LuaInterface.Lua();
 

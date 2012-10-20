@@ -18,10 +18,7 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Helper methods for working with integer types</summary>
   public static class IntegerHelper {

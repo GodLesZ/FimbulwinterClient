@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using FimbulwinterClient.Core.Exports;
+using FimbulwinterClient.Extensions;
 
 namespace FimbulwinterClient.Network.Packets.Account
 {

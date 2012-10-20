@@ -2,74 +2,65 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FimbulwinterClient.Audio.FMOD;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework;
-using FMOD;
 using FimbulwinterClient.Core.Config;
 using System.IO;
 using FimbulwinterClient.Core;
 
-namespace FimbulwinterClient.Audio
-{
-    public class BGMManager : GameComponent
-    {
-        private readonly FMOD.System system;
-        public FMOD.System System
-        {
-            get { return system; }
-        }
+namespace FimbulwinterClient.Audio {
+	public class BGMManager : GameComponent {
+		private readonly FMOD.System system;
+		public FMOD.System System {
+			get { return system; }
+		}
 
-        private FMOD.Sound sound;
-        private FMOD.Channel channel;
-        private string currentSound;
+		private FMOD.Sound sound;
+		private FMOD.Channel channel;
+		private string currentSound;
 
-        public BGMManager()
-            : base(ROClient.Singleton)
-        {
-            uint version = 0;
-            RESULT result = Factory.System_Create(ref system);
+		public BGMManager()
+			: base(RagnarokClient.Singleton) {
+			uint version = 0;
+			RESULT result = Factory.System_Create(ref system);
 
-            if (result != RESULT.OK)
-                throw new Exception("Create SoundSystem Failed");
+			if (result != RESULT.OK)
+				throw new Exception("Create SoundSystem Failed");
 
-            result = System.getVersion(ref version);
+			result = System.getVersion(ref version);
 
-            if (result != RESULT.OK || version < VERSION.number)
-                throw new Exception("Create SoundSystem Failed");
+			if (result != RESULT.OK || version < VERSION.number)
+				throw new Exception("Create SoundSystem Failed");
 
-            result = System.init(32, INITFLAGS.NORMAL, (IntPtr)null);
+			result = System.init(32, INITFLAGS.NORMAL, (IntPtr)null);
 
-            if (result != RESULT.OK)
-                throw new Exception("Create SoundSystem Failed");
+			if (result != RESULT.OK)
+				throw new Exception("Create SoundSystem Failed");
 
-            SharedInformation.Config.BgmVolumeChanged += new Action<float>(cfg_BgmVolumeChanged);
-        }
+			SharedInformation.Config.BgmVolumeChanged += new Action<float>(cfg_BgmVolumeChanged);
+		}
 
-        void cfg_BgmVolumeChanged(float vol)
-        {
-            if (channel != null)
-                channel.setVolume(vol);
-        }
+		void cfg_BgmVolumeChanged(float vol) {
+			if (channel != null)
+				channel.setVolume(vol);
+		}
 
-        public void PlayBGM(string name)
-        {
-            string fname = string.Format("BGM/{0}.mp3", name);
-            return;
-            if (currentSound != fname && File.Exists(fname))
-            {
-                RESULT result = system.createSound(fname, MODE.HARDWARE, ref sound);
+		public void PlayBGM(string name) {
+			string fname = string.Format("BGM/{0}.mp3", name);
+			if (currentSound != fname && File.Exists(fname)) {
+				RESULT result = system.createSound(fname, MODE.HARDWARE, ref sound);
+				if (result != RESULT.OK) {
+					throw new Exception("Create Sound Failed");
+				}
+				result = system.playSound(CHANNELINDEX.FREE, sound, false, ref channel);
+				if (result != RESULT.OK) {
+					throw new Exception("Play Sound Failed");
+				}
 
-                if (result != RESULT.OK)
-                    throw new Exception("Create Sound Failed");
-
-                result = system.playSound(CHANNELINDEX.FREE, sound, false, ref channel);
-
-                if (result != RESULT.OK)
-                    throw new Exception("Play Sound Failed");
-
-               channel.setVolume(SharedInformation.Config.BgmVolume);
-               currentSound = fname;
-            }
-        }
-    }
+				channel.setVolume(SharedInformation.Config.BgmVolume);
+				currentSound = fname;
+			}
+		}
+	}
 }

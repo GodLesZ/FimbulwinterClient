@@ -18,14 +18,7 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Input.Touch;
-using Microsoft.Xna.Framework;
-
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Dummy touch input panel that acts as a placeholder</summary>
   internal class NoTouchPanel : ITouchPanel {

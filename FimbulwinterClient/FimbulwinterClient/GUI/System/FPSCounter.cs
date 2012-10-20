@@ -18,9 +18,9 @@ namespace FimbulwinterClient.Gui.System
         int frameCounter = 0;
         TimeSpan elapsedTime = TimeSpan.Zero;
 
-        private ROClient _client;
+        private RagnarokClient _client;
 
-        public FPSCounter(ROClient roc) : base(roc)
+        public FPSCounter(RagnarokClient roc) : base(roc)
         {
             _client = roc;
             

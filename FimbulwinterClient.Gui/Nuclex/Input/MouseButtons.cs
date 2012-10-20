@@ -19,12 +19,8 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-using Microsoft.Xna.Framework.Input;
-
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Available buttons on a mouse</summary>
   [Flags]

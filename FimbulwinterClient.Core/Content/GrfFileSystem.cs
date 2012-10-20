@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using GRFSharp;
 using System.IO;
+using FimbulwinterClient.Core.Content.GRF;
 
 namespace FimbulwinterClient.Core.Content
 {
     public class GrfFileSystem : IFileSystem
     {
-        private static List<GRF> _grfFiles;
-        public static List<GRF> GrfFiles
+        private static List<GRF.GRF> _grfFiles;
+        public static List<GRF.GRF> GrfFiles
         {
             get { return GrfFileSystem._grfFiles; }
         }
 
         static GrfFileSystem()
         {
-            _grfFiles = new List<GRF>();
+            _grfFiles = new List<GRF.GRF>();
         }
 
         public static void AddGrf(string file)
         {
-            GRF grf = new GRF();
+            GRF.GRF grf = new GRF.GRF();
 
             grf.Open(file);
 

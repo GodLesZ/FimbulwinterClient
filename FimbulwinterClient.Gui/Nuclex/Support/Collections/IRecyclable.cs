@@ -18,9 +18,7 @@ License along with this library
 */
 #endregion
 
-using System;
-
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Allows an object to be returned to its initial state</summary>
   /// <remarks>

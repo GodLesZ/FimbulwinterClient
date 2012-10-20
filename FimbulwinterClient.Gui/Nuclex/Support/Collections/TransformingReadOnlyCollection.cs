@@ -21,9 +21,8 @@ License along with this library
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Collection that transforms the contents of another collection.</summary>
   /// <typeparam name="ContainedItemType">
@@ -87,7 +86,7 @@ namespace Nuclex.Support.Collections {
 
       /// <summary>Gets the current element in the collection.</summary>
       /// <returns>The current element in the collection.</returns>
-      /// <exception cref="System.InvalidOperationException">
+      /// <exception cref="InvalidOperationException">
       ///   The enumerator is positioned before the first element of the collection
       ///   or after the last element.
       /// </exception>
@@ -99,7 +98,7 @@ namespace Nuclex.Support.Collections {
       ///   Sets the enumerator to its initial position, which is before the first element
       ///   in the collection.
       /// </summary>
-      /// <exception cref="System.InvalidOperationException">
+      /// <exception cref="InvalidOperationException">
       ///   The collection was modified after the enumerator was created.
       /// </exception>
       public void Reset() {
@@ -107,7 +106,7 @@ namespace Nuclex.Support.Collections {
       }
 
       /// <summary>The current element in the collection.</summary>
-      /// <exception cref="System.InvalidOperationException">
+      /// <exception cref="InvalidOperationException">
       ///   The enumerator is positioned before the first element of the collection
       ///   or after the last element.
       /// </exception>
@@ -169,15 +168,15 @@ namespace Nuclex.Support.Collections {
     /// <param name="index">
     ///   The zero-based index in array at which copying begins.
     /// </param>
-    /// <exception cref="System.ArgumentException">
+    /// <exception cref="ArgumentException">
     ///   Index is equal to or greater than the length of array or the number of elements
     ///   in the source TransformingReadOnlyCollection is greater than the available space
     ///   from index to the end of the destination array.
     /// </exception>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is less than zero.
     /// </exception>
-    /// <exception cref="System.ArgumentNullException">
+    /// <exception cref="ArgumentNullException">
     ///   Array is null.
     /// </exception>
     public void CopyTo(ExposedItemType[] array, int index) {
@@ -258,7 +257,7 @@ namespace Nuclex.Support.Collections {
     /// <summary>Gets the element at the specified index.</summary>
     /// <param name="index">The zero-based index of the element to get.</param>
     /// <returns>The element at the specified index.</returns>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///    Index is less than zero or index is equal to or greater than
     ///    TransformingReadOnlyCollection.Count.
     /// </exception>

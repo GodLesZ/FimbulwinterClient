@@ -23,7 +23,7 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   // More than 400 lines of code just to implement the .NET collection interfaces.
   // Shows the niceties of having to support languages without generics and using
@@ -44,10 +44,10 @@ namespace Nuclex.Support.Collections {
     /// <param name="item">
     ///   The object to insert into the TransformingReadOnlyCollection
     /// </param>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only.
     /// </exception>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   index is not a valid index in the TransformingReadOnlyCollection.
     /// </exception>
     void IList<ExposedItemType>.Insert(int index, ExposedItemType item) {
@@ -58,10 +58,10 @@ namespace Nuclex.Support.Collections {
     ///   Removes the TransformingReadOnlyCollection item at the specified index.
     /// </summary>
     /// <param name="index">The zero-based index of the item to remove.</param>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only.
     /// </exception>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the TransformingReadOnlyCollection.
     /// </exception>
     void IList<ExposedItemType>.RemoveAt(int index) {
@@ -71,10 +71,10 @@ namespace Nuclex.Support.Collections {
     /// <summary>Gets or sets the element at the specified index.</summary>
     /// <param name="index">The zero-based index of the element to get or set.</param>
     /// <returns>The element at the specified index.</returns>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the TransformingReadOnlyCollection.
     /// </exception>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The property is set and the TransformingReadOnlyCollection is read-only
     /// </exception>
     ExposedItemType IList<ExposedItemType>.this[int index] {
@@ -92,7 +92,7 @@ namespace Nuclex.Support.Collections {
 
     /// <summary>Adds an item to the TransformingReadOnlyCollection.</summary>
     /// <param name="item">The object to add to the TransformingReadOnlyCollection</param>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only.
     /// </exception>
     void ICollection<ExposedItemType>.Add(ExposedItemType item) {
@@ -100,7 +100,7 @@ namespace Nuclex.Support.Collections {
     }
 
     /// <summary>Removes all items from the TransformingReadOnlyCollection</summary>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///    The TransformingReadOnlyCollection is read-only.
     /// </exception>
     void ICollection<ExposedItemType>.Clear() {
@@ -119,7 +119,7 @@ namespace Nuclex.Support.Collections {
     ///   otherwise, false. This method also returns false if item is not found in the
     ///   original TransformingReadOnlyCollection.
     /// </returns>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only.
     /// </exception>
     bool ICollection<ExposedItemType>.Remove(ExposedItemType item) {
@@ -148,7 +148,7 @@ namespace Nuclex.Support.Collections {
     ///   The System.Object to add to the TransformingReadOnlyCollection.
     /// </param>
     /// <returns>The position into which the new element was inserted.</returns>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The System.Collections.IList is read-only or the TransformingReadOnlyCollection
     ///   has a fixed size.
     /// </exception>
@@ -157,7 +157,7 @@ namespace Nuclex.Support.Collections {
     }
 
     /// <summary>Removes all items from the TransformingReadOnlyCollection.</summary>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only.
     /// </exception>
     void IList.Clear() {
@@ -200,14 +200,14 @@ namespace Nuclex.Support.Collections {
     /// <param name="value">
     ///   The System.Object to insert into the TransformingReadOnlyCollection.
     /// </param>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the TransformingReadOnlyCollection.
     /// </exception>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The System.Collections.IList is read-only or the TransformingReadOnlyCollection
     ///   has a fixed size.
     /// </exception>
-    /// <exception cref="System.NullReferenceException">
+    /// <exception cref="NullReferenceException">
     ///   Value is null reference in the TransformingReadOnlyCollection.
     /// </exception>
     void IList.Insert(int index, object value) {
@@ -229,7 +229,7 @@ namespace Nuclex.Support.Collections {
     /// <param name="value">
     ///   The System.Object to remove from the TransformingReadOnlyCollection.
     /// </param>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only or the
     ///   TransformingReadOnlyCollection has a fixed size.
     /// </exception>
@@ -241,10 +241,10 @@ namespace Nuclex.Support.Collections {
     ///   Removes the TransformingReadOnlyCollection item at the specified index.
     /// </summary>
     /// <param name="index">The zero-based index of the item to remove.</param>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the TransformingReadOnlyCollection.
     /// </exception>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The TransformingReadOnlyCollection is read-only or the
     ///   TransformingReadOnlyCollection has a fixed size.
     /// </exception>
@@ -255,10 +255,10 @@ namespace Nuclex.Support.Collections {
     /// <summary>Gets or sets the element at the specified index.</summary>
     /// <param name="index">The zero-based index of the element to get or set.</param>
     /// <returns>The element at the specified index</returns>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the TransformingReadOnlyCollection
     /// </exception>
-    /// <exception cref="System.NotSupportedException">
+    /// <exception cref="NotSupportedException">
     ///   The property is set and the TransformingReadOnlyCollection is read-only.
     /// </exception>
     object IList.this[int index] {
@@ -284,19 +284,19 @@ namespace Nuclex.Support.Collections {
     ///   indexing.
     /// </param>
     /// <param name="index">The zero-based index in array at which copying begins.</param>
-    /// <exception cref="System.ArgumentNullException">
+    /// <exception cref="ArgumentNullException">
     ///   Array is null.
     /// </exception>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is less than zero.
     /// </exception>
-    /// <exception cref="System.ArgumentException">
+    /// <exception cref="ArgumentException">
     ///   Array is multidimensional or index is equal to or greater than the length
     ///   of array or the number of elements in the source TransformingReadOnlyCollection
     ///   is greater than the available space from index to the end of the destination
     ///   array.
     /// </exception>
-    /// <exception cref="System.InvalidCastException">
+    /// <exception cref="InvalidCastException">
     ///   The type of the source TransformingReadOnlyCollection cannot be cast
     ///   automatically to the type of the destination array.
     /// </exception>

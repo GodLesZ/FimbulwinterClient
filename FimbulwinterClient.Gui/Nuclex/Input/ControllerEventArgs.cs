@@ -19,11 +19,8 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Xna.Framework;
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Carries the arguments for the controller detection event</summary>
   public class ControllerEventArgs : EventArgs {

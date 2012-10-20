@@ -18,16 +18,11 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Code-controllable keyboard for unit testing</summary>
   public partial class MockedKeyboard : BufferedKeyboard {

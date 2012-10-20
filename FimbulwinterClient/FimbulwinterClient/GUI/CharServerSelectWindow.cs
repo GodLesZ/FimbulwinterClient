@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FimbulwinterClient.Gui.Nuclex.Input;
 using FimbulwinterClient.Gui.System;
 using FimbulwinterClient.Network.Packets;
-using Nuclex.Input;
 using Microsoft.Xna.Framework;
 using FimbulwinterClient.Network.Packets.Account;
 using FimbulwinterClient.Core.Config;
@@ -18,7 +18,7 @@ namespace FimbulwinterClient.Gui
         {
             InitializeComponent();
 
-            foreach (CharServerInfo csi in ROClient.Singleton.NetworkState.LoginAccept.Servers)
+            foreach (CharServerInfo csi in RagnarokClient.Singleton.NetworkState.LoginAccept.Servers)
                 lstServices.Items.Add(csi);
 
             lstServices.SelectedIndex = 0;
@@ -86,7 +86,7 @@ namespace FimbulwinterClient.Gui
             TingSound.Play();
 
             if (result == 1)
-                ROClient.Singleton.Exit();
+                RagnarokClient.Singleton.Exit();
         }
 
         public override void OnKeyDown(Microsoft.Xna.Framework.Input.Keys key)

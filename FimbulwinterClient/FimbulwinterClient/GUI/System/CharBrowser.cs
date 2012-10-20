@@ -42,32 +42,32 @@ namespace FimbulwinterClient.Gui.System
             Console.WriteLine(Statics.Folder_Accessories);
             for (int i = 0; i < _chars.Length; i++)
             {
-                _bodies[i] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{2}\\{3}_{2}.act", Statics.Humans, Statics.Body, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], Statics.ClassSprites[_chars[i].Job]));
-                _heads[i] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{2}\\{3}_{2}.act", Statics.Humans, Statics.Head, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], _chars[i].Hair));
+                _bodies[i] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{2}\\{3}_{2}.act", Statics.Humans, Statics.Body, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], Statics.ClassSprites[_chars[i].Job]));
+                _heads[i] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{2}\\{3}_{2}.act", Statics.Humans, Statics.Head, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], _chars[i].Hair));
 
                 if (_chars[i].ClothesColor != 0)
                 {
-                    Palette pal = SharedInformation.ContentManager.Load<Palette>(string.Format("data\\palette\\{0}\\{1}_{2}_{3}.pal", Statics.Palette_Body, Statics.ClassSprites[_chars[i].Job], Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], _chars[i].ClothesColor));
+                    Palette pal = SharedInformation.ContentManager.Load<Palette>(string.Format("data\\palette\\{0}\\{1}_{2}_{3}.pal", Statics.Palette_Body, Statics.ClassSprites[_chars[i].Job], Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], _chars[i].ClothesColor));
                     _bodies[i].SetPalette(pal);
                 }
 
                 if (_chars[i].HairColor != 0)
                 {
-                    Palette pal = SharedInformation.ContentManager.Load<Palette>(string.Format("data\\palette\\{0}\\{0}{1}_{2}_{3}.pal", Statics.Palette_Head, _chars[i].Hair, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], _chars[i].HairColor));
+                    Palette pal = SharedInformation.ContentManager.Load<Palette>(string.Format("data\\palette\\{0}\\{0}{1}_{2}_{3}.pal", Statics.Palette_Head, _chars[i].Hair, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], _chars[i].HairColor));
                     _heads[i].SetPalette(pal);
                 }
 
                 // headgears
                 _accessories[i] = new SpriteAction[4];
                 if (_chars[i].Accessory > 0)
-                    _accessories[i][0] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{1}{2}.act", Statics.Folder_Accessories, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], Statics.Accessories[_chars[i].Accessory3].Item2));
+                    _accessories[i][0] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{1}{2}.act", Statics.Folder_Accessories, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], Statics.Accessories[_chars[i].Accessory3].Item2));
                 if (_chars[i].Accessory2 > 0)
-                    _accessories[i][1] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{1}{2}.act", Statics.Folder_Accessories, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], Statics.Accessories[_chars[i].Accessory2].Item2));
+                    _accessories[i][1] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{1}{2}.act", Statics.Folder_Accessories, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], Statics.Accessories[_chars[i].Accessory2].Item2));
                 if (_chars[i].Accessory3 > 0)
-                    _accessories[i][2] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{1}{2}.act", Statics.Folder_Accessories, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], Statics.Accessories[_chars[i].Accessory].Item2));
+                    _accessories[i][2] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{1}{2}.act", Statics.Folder_Accessories, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], Statics.Accessories[_chars[i].Accessory].Item2));
 
                 if (_chars[i].Robe > 0)
-                    _accessories[i][3] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{2}\\{3}_{2}.act", Statics.Folder_Robes, Statics.Robes[_chars[i].Robe].Item2, Statics.Sex[ROClient.Singleton.NetworkState.LoginAccept.Sex], Statics.ClassSprites[_chars[i].Job]));
+                    _accessories[i][3] = SharedInformation.ContentManager.Load<SpriteAction>(string.Format("data\\sprite\\{0}\\{1}\\{2}\\{3}_{2}.act", Statics.Folder_Robes, Statics.Robes[_chars[i].Robe].Item2, Statics.Sex[RagnarokClient.Singleton.NetworkState.LoginAccept.Sex], Statics.ClassSprites[_chars[i].Job]));
             }
         }
 

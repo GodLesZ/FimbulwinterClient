@@ -18,16 +18,13 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Runtime.InteropServices;
-
 using Microsoft.Xna.Framework.Input;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Keyboard that buffers key presses until Update() is called</summary>
   public abstract class BufferedKeyboard : IKeyboard {

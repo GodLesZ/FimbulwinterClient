@@ -19,10 +19,8 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Collections;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   partial class Deque<ItemType> {
 

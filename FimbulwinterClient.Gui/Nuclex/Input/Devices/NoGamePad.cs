@@ -18,13 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework;
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Dummy that takes the place of unfilled player slots</summary>
   internal class NoGamePad : IGamePad {

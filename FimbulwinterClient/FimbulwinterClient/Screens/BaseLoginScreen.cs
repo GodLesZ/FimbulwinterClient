@@ -30,7 +30,7 @@ namespace FimbulwinterClient.Screens
                     }
                 }
                 
-                var gd = ROClient.Singleton.GraphicsDevice;
+                var gd = RagnarokClient.Singleton.GraphicsDevice;
                 SpriteBatch sprite = new SpriteBatch(gd);
                 RenderTarget2D render2D = new RenderTarget2D(gd, 1024, 768);
                 gd.SetRenderTarget(render2D);
@@ -43,7 +43,7 @@ namespace FimbulwinterClient.Screens
                 gd.SetRenderTarget(null);
             }
 
-            ROClient.Singleton.BgmManager.PlayBGM("01");
+            RagnarokClient.Singleton.BgmManager.PlayBGM("01");
         }
 
         public void ShowWait()

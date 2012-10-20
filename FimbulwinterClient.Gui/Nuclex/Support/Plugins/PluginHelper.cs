@@ -21,7 +21,7 @@ License along with this library
 using System;
 using System.Reflection;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Supporting functions for the plugin classes</summary>
   public static class PluginHelper {

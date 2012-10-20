@@ -21,9 +21,8 @@ License along with this library
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Collection of weakly referenced objects</summary>
   /// <remarks>
@@ -67,7 +66,7 @@ namespace Nuclex.Support.Collections {
 
       /// <summary>Gets the current element in the collection.</summary>
       /// <returns>The current element in the collection.</returns>
-      /// <exception cref="System.InvalidOperationException">
+      /// <exception cref="InvalidOperationException">
       ///   The enumerator is positioned before the first element of the collection
       ///   or after the last element.
       /// </exception>
@@ -79,7 +78,7 @@ namespace Nuclex.Support.Collections {
       ///   Sets the enumerator to its initial position, which is before the first element
       ///   in the collection.
       /// </summary>
-      /// <exception cref="System.InvalidOperationException">
+      /// <exception cref="InvalidOperationException">
       ///   The collection was modified after the enumerator was created.
       /// </exception>
       public void Reset() {
@@ -87,7 +86,7 @@ namespace Nuclex.Support.Collections {
       }
 
       /// <summary>The current element in the collection.</summary>
-      /// <exception cref="System.InvalidOperationException">
+      /// <exception cref="InvalidOperationException">
       ///   The enumerator is positioned before the first element of the collection
       ///   or after the last element.
       /// </exception>
@@ -156,15 +155,15 @@ namespace Nuclex.Support.Collections {
     /// <param name="index">
     ///   The zero-based index in array at which copying begins.
     /// </param>
-    /// <exception cref="System.ArgumentException">
+    /// <exception cref="ArgumentException">
     ///   Index is equal to or greater than the length of array or the number of elements
     ///   in the source WeakCollection is greater than the available space from index to
     ///   the end of the destination array.
     /// </exception>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is less than zero.
     /// </exception>
-    /// <exception cref="System.ArgumentNullException">
+    /// <exception cref="ArgumentNullException">
     ///   Array is null.
     /// </exception>
     public void CopyTo(ItemType[] array, int index) {
@@ -238,7 +237,7 @@ namespace Nuclex.Support.Collections {
     /// <summary>Gets the element at the specified index.</summary>
     /// <param name="index">The zero-based index of the element to get.</param>
     /// <returns>The element at the specified index.</returns>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///    Index is less than zero or index is equal to or greater than
     ///    WeakCollection.Count.
     /// </exception>
@@ -284,7 +283,7 @@ namespace Nuclex.Support.Collections {
     ///   The zero-based index at which item should be inserted.
     /// </param>
     /// <param name="item">The object to insert into the WeakCollection</param>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   index is not a valid index in the WeakCollection.
     /// </exception>
     public void Insert(int index, ItemType item) {
@@ -295,7 +294,7 @@ namespace Nuclex.Support.Collections {
     ///   Removes the WeakCollection item at the specified index.
     /// </summary>
     /// <param name="index">The zero-based index of the item to remove.</param>
-    /// <exception cref="System.ArgumentOutOfRangeException">
+    /// <exception cref="ArgumentOutOfRangeException">
     ///   Index is not a valid index in the WeakCollection.
     /// </exception>
     public void RemoveAt(int index) {

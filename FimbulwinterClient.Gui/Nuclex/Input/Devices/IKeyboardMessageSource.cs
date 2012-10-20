@@ -18,14 +18,11 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Delegate used to report a keyboard event</summary>
   /// <param name="key">Key that was pressed or released</param>

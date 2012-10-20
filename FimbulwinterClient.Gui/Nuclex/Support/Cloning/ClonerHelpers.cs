@@ -20,11 +20,9 @@ License along with this library
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reflection;
 
-namespace Nuclex.Support.Cloning {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Cloning {
 
   /// <summary>Contains helper methods for the cloners</summary>
   internal static class ClonerHelpers {

@@ -19,10 +19,8 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Interface for collections that can be observed</summary>
   /// <typeparam name="ItemType">Type of items managed in the collection</typeparam>

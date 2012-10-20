@@ -21,7 +21,7 @@ License along with this library
 using System;
 using System.IO;
 
-namespace Nuclex.Support.IO {
+namespace FimbulwinterClient.Gui.Nuclex.Support.IO {
 
   /// <summary>Specialized memory stream for ring buffers</summary>
   /// <remarks>

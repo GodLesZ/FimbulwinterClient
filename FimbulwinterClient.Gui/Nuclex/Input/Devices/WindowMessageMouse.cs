@@ -19,14 +19,11 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
-using System.Runtime.InteropServices;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Interfaces with a PC mouse via window messages</summary>
   internal class WindowMessageMouse : BufferedMouse, IDisposable {

@@ -19,11 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 
-namespace Nuclex.Support.IO {
+namespace FimbulwinterClient.Gui.Nuclex.Support.IO {
 
   /// <summary>Wraps a stream and exposes only a limited region of its data</summary>
   public class PartialStream : Stream {

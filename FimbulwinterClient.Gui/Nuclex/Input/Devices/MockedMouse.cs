@@ -18,14 +18,10 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
-using Microsoft.Xna.Framework.Input;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Code-controllable mouse for unit testing</summary>
   public class MockedMouse : BufferedMouse {

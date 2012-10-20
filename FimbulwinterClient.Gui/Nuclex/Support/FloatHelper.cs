@@ -19,10 +19,9 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Helper routines for working with floating point numbers</summary>
   /// <remarks>

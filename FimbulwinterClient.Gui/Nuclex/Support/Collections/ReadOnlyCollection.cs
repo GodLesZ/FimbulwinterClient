@@ -22,7 +22,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Wraps a Collection and prevents users from modifying it</summary>
   /// <typeparam name="ItemType">Type of items to manage in the Collection</typeparam>

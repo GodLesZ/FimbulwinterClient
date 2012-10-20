@@ -18,11 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-
 using Microsoft.Xna.Framework;
 
-namespace Nuclex.Input {
+namespace FimbulwinterClient.Gui.Nuclex.Input {
 
   /// <summary>Player index enumeration with slots for 8 players</summary>
   public enum ExtendedPlayerIndex {

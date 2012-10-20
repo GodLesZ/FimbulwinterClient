@@ -18,10 +18,7 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
-
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Base class for objects that can be parented to an owner</summary>
   /// <typeparam name="ParentType">Type of the parent object</typeparam>

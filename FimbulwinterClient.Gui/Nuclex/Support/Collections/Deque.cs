@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>A double-ended queue that allocates memory in blocks</summary>
   /// <typeparam name="ItemType">Type of the items being stored in the queue</typeparam>

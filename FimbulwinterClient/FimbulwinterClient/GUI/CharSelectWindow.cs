@@ -25,7 +25,7 @@ namespace FimbulwinterClient.Gui
             this.Size = new Vector2(576, 358);
             this.Position = new Vector2(SharedInformation.Config.ScreenWidth / 2 - (576 / 2), SharedInformation.Config.ScreenHeight / 2 - (358 / 2));
 
-            cbChars = new CharBrowser(ROClient.Singleton.NetworkState.CharAccept.Chars, ROClient.Singleton.NetworkState.CharAccept.MaxSlots, ROClient.Singleton.NetworkState.CharAccept.PremiumSlots, ROClient.Singleton.NetworkState.CharAccept.AvailableSlots);
+            cbChars = new CharBrowser(RagnarokClient.Singleton.NetworkState.CharAccept.Chars, RagnarokClient.Singleton.NetworkState.CharAccept.MaxSlots, RagnarokClient.Singleton.NetworkState.CharAccept.PremiumSlots, RagnarokClient.Singleton.NetworkState.CharAccept.AvailableSlots);
             cbChars.Position = new Vector2(60, 43);
             cbChars.Size = new Vector2(457, 138);
             cbChars.SelectedIndexChanged += new Action(cbChars_SelectedIndexChanged);
@@ -119,7 +119,7 @@ namespace FimbulwinterClient.Gui
 
             lblPage2 = new Label();
             lblPage2.Position = new Vector2(282, 187);
-            lblPage2.Text =  " / " + (int)(ROClient.Singleton.NetworkState.CharAccept.MaxSlots / 3);
+            lblPage2.Text =  " / " + (int)(RagnarokClient.Singleton.NetworkState.CharAccept.MaxSlots / 3);
             lblPage2.Font = Gulim8B;
             lblPage2.ForeColor = new Color(99, 99, 99, 255);
             this.Controls.Add(lblPage2);
@@ -131,7 +131,7 @@ namespace FimbulwinterClient.Gui
 
             lblCharacters = new Label();
             lblCharacters.Position = new Vector2(439, 200);
-            lblCharacters.Text = ROClient.Singleton.NetworkState.CharAccept.Chars.Count() + " / " + (int)(ROClient.Singleton.NetworkState.CharAccept.AvailableSlots);
+            lblCharacters.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars.Count() + " / " + (int)(RagnarokClient.Singleton.NetworkState.CharAccept.AvailableSlots);
             lblCharacters.Font = Gulim8B;
             this.Controls.Add(lblCharacters);
 
@@ -197,20 +197,20 @@ namespace FimbulwinterClient.Gui
             }
             else
             {
-                lblName.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Name;
-                lblJob.Text = Statics.ClassNames[ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Job];
-                lblLv.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].BaseLevel.ToString();
-                lblEXP.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Exp.ToString();
-                lblHP.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].HP.ToString();
-                lblSP.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].SP.ToString();
-                lblMap.Text = Statics.MapNames[ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].MapName];
+                lblName.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Name;
+                lblJob.Text = Statics.ClassNames[RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Job];
+                lblLv.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].BaseLevel.ToString();
+                lblEXP.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Exp.ToString();
+                lblHP.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].HP.ToString();
+                lblSP.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].SP.ToString();
+                lblMap.Text = Statics.MapNames[RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].MapName];
 
-                lblStr.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Str.ToString();
-                lblAgi.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Agi.ToString();
-                lblVit.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Vit.ToString();
-                lblInt.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Int.ToString();
-                lblDex.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Dex.ToString();
-                lblLuk.Text = ROClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Luk.ToString();
+                lblStr.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Str.ToString();
+                lblAgi.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Agi.ToString();
+                lblVit.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Vit.ToString();
+                lblInt.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Int.ToString();
+                lblDex.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Dex.ToString();
+                lblLuk.Text = RagnarokClient.Singleton.NetworkState.CharAccept.Chars[cbChars.SelectedIndex].Luk.ToString();
 
                 btnAction.Text = "enter";
             }

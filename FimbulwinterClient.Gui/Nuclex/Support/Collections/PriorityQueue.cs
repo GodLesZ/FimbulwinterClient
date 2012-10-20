@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace Nuclex.Support.Collections {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Collections {
 
   /// <summary>Queue that dequeues items in order of their priority</summary>
   public class PriorityQueue<ItemType> : ICollection, IEnumerable<ItemType> {

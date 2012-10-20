@@ -18,11 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
-using System.Collections.Generic;
 using System.Reflection;
 
-namespace Nuclex.Support.Plugins {
+namespace FimbulwinterClient.Gui.Nuclex.Support.Plugins {
 
   /// <summary>Interface for an assembly loading helper</summary>
   public interface IAssemblyLoader {

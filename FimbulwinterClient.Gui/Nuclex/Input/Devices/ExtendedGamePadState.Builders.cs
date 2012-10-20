@@ -19,15 +19,13 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-
 using Microsoft.Xna.Framework.Input;
 
 #if !NO_DIRECTINPUT
 using SlimDX.DirectInput;
 #endif
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Extended game pad state with additional buttons and axes</summary>
   partial struct ExtendedGamePadState {

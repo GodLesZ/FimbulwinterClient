@@ -18,10 +18,9 @@ License along with this library
 */
 #endregion
 
-using System;
 using System.Diagnostics;
 
-namespace Nuclex.Support {
+namespace FimbulwinterClient.Gui.Nuclex.Support {
 
   /// <summary>Manages a globally shared instance of the given Type</summary>
   /// <typeparam name="SharedType">

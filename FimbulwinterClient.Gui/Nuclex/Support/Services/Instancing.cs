@@ -21,8 +21,6 @@ License along with this library
 using System;
 using System.Collections.Generic;
 
-using Nuclex.Support.Plugins;
-
 #if ENABLE_SERVICEMANAGER
 
 namespace Nuclex.Support.Services {

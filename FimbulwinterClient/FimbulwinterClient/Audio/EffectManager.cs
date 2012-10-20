@@ -12,7 +12,7 @@ namespace FimbulwinterClient.Audio
     public class EffectManager : GameComponent
     {
         public EffectManager()
-            : base(ROClient.Singleton)
+            : base(RagnarokClient.Singleton)
         {
 
         }

@@ -24,8 +24,6 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
 
-using Nuclex.Support.Plugins;
-
 #if ENABLE_SERVICEMANAGER
 
 namespace Nuclex.Support.Services {

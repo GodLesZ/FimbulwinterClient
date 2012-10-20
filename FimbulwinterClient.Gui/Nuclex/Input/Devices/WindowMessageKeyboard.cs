@@ -19,15 +19,10 @@ License along with this library
 #endregion
 
 using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Runtime.InteropServices;
-
-using Microsoft.Xna.Framework.Input;
 
 #if WINDOWS
 
-namespace Nuclex.Input.Devices {
+namespace FimbulwinterClient.Gui.Nuclex.Input.Devices {
 
   /// <summary>Interfaces with a PC keyboard via window messages</summary>
   internal class WindowMessageKeyboard : BufferedKeyboard, IDisposable {

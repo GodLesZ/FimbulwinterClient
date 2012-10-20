@@ -11,7 +11,7 @@ namespace FimbulwinterClient
         /// </summary>
         static void Main(string[] args)
         {
-            ROClient game = new ROClient();
+            RagnarokClient game = new RagnarokClient();
             game.Run();
             SharedInformation.Config.Save();
         }
